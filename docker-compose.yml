@@ -1,4 +1,4 @@
-version: "2.1"
+version: "2.0"
 
 services:
   namenode:
@@ -92,3 +92,4 @@ volumes:
   hadoop_datanode2:
   hadoop_datanode3:
   hadoop_historyserver:
+  

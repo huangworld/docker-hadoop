@@ -9,7 +9,8 @@ ENV PASH_HOST="docker"
 ENV DISH_TOP="/opt/dish"
 ENV PASH_TOP="${DISH_TOP}/pash"
 # download PaSh
-RUN git clone https://github.com/binpash/dish.git /opt/dish --recursive
+ADD "https://api.github.com/repos/huangworld/dish/git/ref/heads/dev/zhichenghuang" skipcache
+RUN git clone -b dev/zhichenghuang https://github.com/huangworld/dish.git /opt/dish --recursive
 # install PaSh and setup shell paths
 RUN bash ${PASH_TOP}/scripts/distro-deps.sh
 RUN yes | bash ${PASH_TOP}/scripts/setup-pash.sh
